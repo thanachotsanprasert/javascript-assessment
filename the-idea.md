@@ -8,3 +8,7 @@ So the way of making will use the same format as Khun Kan request but in differe
 step
 
 1 i will create mock data to "variable" to hold my array 
+2 i created buleprint dataTable
+3 i declare myDatabase and use = new DataTable to keep new input that will use buleprint dataTable
+4 i make new command update(row, col, value) which will ask for 3 data
+5 
