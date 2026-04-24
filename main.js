@@ -3,8 +3,6 @@ const tableData = [
     ["001", "a@a.com", "aa"]       
 ];
 
-console.log(tableData);
-
 class DataTable {
     constructor(data) {
         this.table = data ;
@@ -12,7 +10,16 @@ class DataTable {
     update(row, col, value) {
         this.table[row][col] = value;
     }
+
+    addRow(newRowArray) {
+        this.table.push(newRowArray);
+    }
+
+    deleteRow(rowIndex) {
+        this.table.splice(rowIndex, 1);
+    }
 }
+
 
 const myDatabase = new DataTable(tableData);
 

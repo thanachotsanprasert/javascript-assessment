@@ -11,4 +11,12 @@ step
 2 i created buleprint dataTable
 3 i declare myDatabase and use = new DataTable to keep new input that will use buleprint dataTable
 4 i make new command update(row, col, value) which will ask for 3 data
-5 
+5 i override "aa" to become "bb" by this 2 line 
+
+    update(row, col, value) {
+        this.table[row][col] = value;
+
+myDatabase.update(1, 2, "bb");
+
+6 i add delete function and add this.table.splice(rowIndex, 1); to delete a row
+
