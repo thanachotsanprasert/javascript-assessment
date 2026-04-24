@@ -1,6 +1,16 @@
-const prompt = require('prompt-sync')({sigint: true});
+const tableData = [
+    ["id", "email", "name"],
+    ["001", "a@a.com", "aa"]       
+];
 
-const hat = '^';
-const hole = 'O';
-const fieldCharacter = '░';
-const pathCharacter = '*';
+console.log(tableData);
+
+class DataTable {
+    constructor(data) {
+        this.table = data ;
+    }
+}
+
+const myDatabase = new DataTable(tableData);
+
+console.log(myDatabase.table)

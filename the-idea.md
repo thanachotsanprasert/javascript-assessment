@@ -5,3 +5,6 @@ Instead of making the map and action to move to find the hat i prefer to change 
 
 So the way of making will use the same format as Khun Kan request but in different theme.
 
+step
+
+1 i will create mock data to "variable" to hold my array 
