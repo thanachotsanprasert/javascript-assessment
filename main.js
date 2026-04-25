@@ -30,7 +30,10 @@ class DataTable {
 
 const myDatabase = new DataTable(tableData);
 
-myDatabase.update(1, 2, "bb");
-
-
-console.log(myDatabase.table); 
+    keyboard.question("Type ID, Email, and Name (separated by commas): ", (answer) => {
+        const newRow = answer.split(",");
+        myDatabase.addRow(newRow);
+        console.log("\n--- NEW TABLE ---");
+      console.log(myDatabase.table);
+      keyboard.close(); 
+});
