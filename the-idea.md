@@ -1,6 +1,8 @@
 It hard to type in Thai and change to English for coding so i will type all in English kub.
 ขออนุญาตเขียนเป็นภาษาอังกฤษนะครับ เพราะสลับภาษาไปมา ไม่สะดวกเท่าไหร่
 
+the use file for the assesment is main.js
+
 The Idea
 
 Instead of making the map and action to move and find the hat. i prefer to change the assesment to the idea i can understand which to make the table as data and make the funcstion that can change the data inside.
@@ -31,3 +33,8 @@ i able to make blueprint and use update, add row, delete row and splice to manip
 beside this i still can not do kub.
 
 So this will be my assesment for now.
+
+25 April
+
+7 i continue my assesment, i declare readline funcstion to be able to type in cli
+

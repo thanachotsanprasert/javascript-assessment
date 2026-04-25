@@ -1,3 +1,10 @@
+const readline = require("readline")
+const keyboard = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+
+});
+
 const tableData = [
     ["id", "email", "name"],
     ["001", "a@a.com", "aa"]       
@@ -25,4 +32,5 @@ const myDatabase = new DataTable(tableData);
 
 myDatabase.update(1, 2, "bb");
 
-console.log(myDatabase.table)
+
+console.log(myDatabase.table); 
