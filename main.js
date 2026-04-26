@@ -28,9 +28,18 @@ class DataTable {
 
 const myDatabase = new DataTable(tableData);
 
+function askForUser() {
+
 keyboard.question(
-  "Type ID, Email, and Name (separated by commas): ",
+  "Type ID, Email, and Name (separated by commas): / Type 'stop' for exit : ",
   (answer) => {
+if (answer === "stop") {
+      console.log("\n--- FINAL TABLE ---");
+      console.log(myDatabase.table);
+      keyboard.close();
+      return;
+    
+  }
     const newRow = answer.split(",");
     if (newRow.length === 3) {
       myDatabase.addRow(newRow);
@@ -39,7 +48,8 @@ keyboard.question(
     } else {
       console.log("ERROR: You must type exactly 3 things separated by commas.");
     }
+    askForUser();
+});
+}
 
-    keyboard.close();
-  },
-);
+askForUser();
