@@ -38,3 +38,7 @@ So this will be my assesment for now.
 
 7 i continue my assesment, i declare readline funcstion to be able to type in cli
 
+26 April
+
+8 i add safety check and force user to give  3 answer seperate by comma  if (newRow.length === 3) {
+ 
