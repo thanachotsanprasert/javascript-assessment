@@ -42,3 +42,4 @@ So this will be my assesment for now.
 
 8 i add safety check and force user to give  3 answer seperate by comma  if (newRow.length === 3) {
 9 i add code to be able to insert multiple line, and be able to stop for exit cli from code
+10 i add code to be able to add row, delete row, and delete row.

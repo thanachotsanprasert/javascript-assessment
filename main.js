@@ -30,26 +30,58 @@ const myDatabase = new DataTable(tableData);
 
 function askForUser() {
 
-keyboard.question(
-  "Type ID, Email, and Name (separated by commas): / Type 'stop' for exit : ",
-  (answer) => {
-if (answer === "stop") {
+keyboard.question("Choose an action (add / delete / update / stop): ", (action) => {
+
+if (action === "stop") {
       console.log("\n--- FINAL TABLE ---");
       console.log(myDatabase.table);
       keyboard.close();
       return;
     
   }
-    const newRow = answer.split(",");
-    if (newRow.length === 3) {
-      myDatabase.addRow(newRow);
-      console.log("Saved");
-      console.log(myDatabase.table);
-    } else {
-      console.log("ERROR: You must type exactly 3 things separated by commas.");
-    }
-    askForUser();
-});
+
+  else if (action === "add") {
+      keyboard.question("Type ID, Email, and Name (separated by commas): ", (addAnswer) => {
+          
+          const newRow = addAnswer.split(",");
+        
+          if (newRow.length === 3) {
+              myDatabase.addRow(newRow);
+              console.log("\n--- SUCCESS: ROW SAVED ---");
+              console.log(myDatabase.table);
+          } else {
+              console.log("\nERROR: You must type exactly 3 things separated by commas.");
+          }
+          
+          askForUser(); 
+          
+      })
+  }
+
+else if (action === "delete") {
+      keyboard.question("Type the row number to delete (e.g., 1): ", (rowAnswer) => {
+          const indexToDelete = Number(rowAnswer);
+          myDatabase.deleteRow(indexToDelete);
+          
+          console.log("\n--- SUCCESS: ROW DELETED ---");
+          console.log(myDatabase.table);
+          
+          askForUser(); 
+      });
+  }
+
+  else if (action === "update") {
+      console.log("--> You clicked Update! (Code goes here later)");
+      askForUser(); 
+  }
+
+  else {
+      console.log("ERROR: I don't understand that command.");
+      askForUser(); 
+  }
+
+
+}); 
 }
 
 askForUser();
