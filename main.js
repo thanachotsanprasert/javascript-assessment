@@ -30,7 +30,7 @@ const myDatabase = new DataTable(tableData);
 
 function askForUser() {
 
-keyboard.question("Choose an action (add / delete / update / stop): ", (action) => {
+keyboard.question("Choose an action (add / delete / stop): ", (action) => {
 
 if (action === "stop") {
       console.log("\n--- FINAL TABLE ---");
@@ -68,11 +68,6 @@ else if (action === "delete") {
           
           askForUser(); 
       });
-  }
-
-  else if (action === "update") {
-      console.log("--> You clicked Update! (Code goes here later)");
-      askForUser(); 
   }
 
   else {
